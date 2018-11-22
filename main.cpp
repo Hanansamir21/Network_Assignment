@@ -30,7 +30,36 @@ string alter(int index,string m_in)
     return m_in;
 
 }
+string Remainder(string m,string p)
+{
+    string r="";
+  string z="0";
+  string transmitted_message="";
+  for(int i=0;i<p.length()-1;i++)
+   {
 
+   m+='0';
+   z+='0';
+
+   }
+   r= m.substr(0,p.length());
+    for(int j=p.length();j<m.length();j++){
+     if(r[0]=='1')
+    {
+     for(int i=0;i<p.length();i++)
+    {
+        r[i]=Xor(r[i],p[i]);}}
+        else{
+                for(int i=0;i<p.length()-1;i++)
+               {
+        r[i]=Xor(r[i],z[i]);}}
+
+    r.erase(0,1);
+    r=r+m[j];
+        }
+    r.erase(0,1);
+    return r;
+}
 int main()
 {
     cout << "Hello world!" << endl;
