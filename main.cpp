@@ -37,7 +37,25 @@ string Remainder(string m,string p)
   string transmitted_message="";
   for(int i=0;i<p.length()-1;i++)
    {
+void verifier(string TransmittedM,string poly)
+{
+   string verify=Remainder(TransmittedM,poly);
+   int flag=0;
+   for(int i=0;i<verify.length();i++)
+   {
+       if(verify[i]!='0')
+       {
+           flag++;
 
+       }
+
+   }
+    if(flag>0)
+        cout<<"Ops!! There is an error"<<endl;
+    else
+        cout<<"Message is correct"<<endl;
+
+}
    m+='0';
    z+='0';
 
