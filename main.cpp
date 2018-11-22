@@ -60,6 +60,13 @@ string Remainder(string m,string p)
     r.erase(0,1);
     return r;
 }
+string Generator(string mm,string pp)
+{
+    string rr=Remainder(mm,pp);
+     mm+=rr;
+     return mm;
+}
+
 int main()
 {
     cout << "Hello world!" << endl;
